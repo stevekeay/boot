@@ -1,0 +1,13 @@
+#!/bin/busybox sh
+
+echo "$0: Starting demo linux distrolet"
+
+echo "$0: install busybox links"
+/bin/busybox --install -s
+
+echo "$0: mount filesystems"
+mount -t devtmpfs none /dev
+mount -t proc none /proc
+mount -t sysfs none /sys
+
+echo "$0: completed"

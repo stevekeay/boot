@@ -1,0 +1,11 @@
+#!ipxe
+
+echo boot.ipxe: downloading kernel
+kernel tftp://1.1.1.2/vmlinuz quiet loglevel=4 console=ttyS0
+
+echo boot.ipxe: downloading initrd
+initrd tftp://1.1.1.2/initrd
+
+echo boot.ipxe: booting kernel now
+boot
+
